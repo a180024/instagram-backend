@@ -1,0 +1,41 @@
+{
+  "name": "instagram_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand ./test",
+    "start": "npm app",
+    "app": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9",
+    "mongoose-unique-array": "^0.3.4",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "slug": "^4.0.1",
+    "underscore": "^1.11.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "mongodb-memory-server": "^6.9.2",
+    "nodemon": "^2.0.5",
+    "superagent": "^6.1.0",
+    "supertest": "^6.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
