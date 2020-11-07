@@ -10,6 +10,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await mongoose.connection.close();
+  await new Promise(resolve => setTimeout(() => resolve(), 500));
 });
 
 describe("Auth", () => {
@@ -67,3 +68,4 @@ describe("Auth", () => {
     expect(res.statusCode).toBe(422);
   });
 });
+
