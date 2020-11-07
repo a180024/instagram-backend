@@ -19,7 +19,10 @@ beforeAll(async () => {
   await validUser.save();
 });
 
-afterAll(async () => await dbHandler.closeDatabase());
+afterAll(async () => {
+  await dbHandler.closeDatabase();
+  await new Promise(resolve => setTimeout(() => resolve(), 500)); 
+};
 
 describe("Post", () => {
   it("Create valid post", async () => {
@@ -77,3 +80,4 @@ describe("Post", () => {
     expect(savedPost.likes.length).toBe(1);
   });
 });
+
