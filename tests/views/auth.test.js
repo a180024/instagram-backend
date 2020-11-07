@@ -1,5 +1,4 @@
 const request = require("supertest");
-const mongoose = require("mongoose");
 
 const app = require("./app");
 const dbHandler = require("../db-handler");
@@ -9,7 +8,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  await mongoose.connection.close();
+  await dbHandler.connect();
   await new Promise(resolve => setTimeout(() => resolve(), 500));
 });
 
