@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand ./test",
+    "test": "jest --runInBand --detectOpenHandles ./test",
     "start": "npm app",
     "app": "nodemon app"
   },
