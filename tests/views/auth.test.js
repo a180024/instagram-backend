@@ -8,7 +8,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  await dbHandler.connect();
+  await dbHandler.closeDatabase();
   await new Promise(resolve => setTimeout(() => resolve(), 500));
 });
 
