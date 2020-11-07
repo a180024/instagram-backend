@@ -1,13 +1,4 @@
 language: "node_js"
+before_install: npm i -g npm@2
 node_js:
-  - 14.2.0
-branches:
-  only: 
-  - main
-before_install:
-- npm_update
-install:
-- npm install
-script:
-- npm test 
-
+  - 14
