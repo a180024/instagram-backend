@@ -42,6 +42,7 @@ beforeAll(async () => {
 
 afterAll(async () => {
   await dbHandler.closeDatabase();
+  await new Promise((resolve) => setTimeout(() => resolve(), 500));
 });
 
 describe("Auth", () => {
