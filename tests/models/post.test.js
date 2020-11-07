@@ -22,7 +22,7 @@ beforeAll(async () => {
 afterAll(async () => {
   await dbHandler.closeDatabase();
   await new Promise(resolve => setTimeout(() => resolve(), 500)); 
-};
+});
 
 describe("Post", () => {
   it("Create valid post", async () => {
