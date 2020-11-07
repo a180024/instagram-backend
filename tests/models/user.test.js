@@ -7,7 +7,10 @@ beforeAll(async () => await dbHandler.connect());
 
 afterEach(async () => await dbHandler.clearDatabase());
 
-afterAll(async () => await dbHandler.closeDatabase());
+afterAll(async () => {
+  await dbHandler.closeDatabase();
+  await new Promise((resolve) => setTimeout(() => resolve(), 500));
+});
 
 describe("User", () => {
   it("Create valid user", async () => {
@@ -43,3 +46,4 @@ describe("User", () => {
     expect(err.errors.hash).toBeDefined();
   });
 });
+
