@@ -1,11 +1,5 @@
-# Instagram Clone Backend
+# Example App Backend
 
 > Using Node, Express 
-
-## Usage
-```
-$ npm install
-$ npm run app 
-```
 
 
